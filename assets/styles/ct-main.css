@@ -1,0 +1,134 @@
+.ct-container {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.ct-orange {
+  color: #CB935D;
+}
+
+.ct-button {
+  display: block;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: #1F3044;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 30px;
+  border: 2px solid #CB935D;
+  transition: all 0.4s;
+}
+.ct-button:hover {
+  background-color: #CB935D;
+  color: #FFFFFF;
+}
+
+.ct-button-light {
+  display: block;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: #F2F2F2;
+  color: #CB935D;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 30px;
+  border: 2px solid #CB935D;
+  transition: all 0.4s;
+}
+.ct-button-light:hover {
+  background-color: #CB935D;
+  color: #FFFFFF;
+}
+
+.ct-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(31, 48, 68, 0);
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 20px 0;
+  z-index: 99999;
+}
+.ct-navbar a {
+  font-size: 16px;
+  color: white;
+  transition: all 0.4s;
+}
+.ct-navbar .row {
+  display: flex;
+  justify-content: space-between;
+}
+.ct-navbar .row .ct-navbar-callus a {
+  font-weight: bold;
+}
+.ct-navbar .row .ct-navbar-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ct-navbar .row .ct-navbar-menu ul li {
+  display: inline-flex;
+  margin: 0 10px;
+}
+.ct-navbar .row .ct-navbar-menu ul li a:hover {
+  color: #CB935D;
+}
+
+.ct-hero {
+  background: linear-gradient(rgba(31, 48, 68, 0.8), rgba(31, 48, 68, 0.8)), url("/assets/images/ct-hero.jpg");
+  background-size: cover;
+  background-position: right center;
+  padding: 100px 0 80px 0;
+}
+.ct-hero h1, .ct-hero h2, .ct-hero p {
+  color: #FFFFFF;
+}
+.ct-hero h1 {
+  font-size: 46px;
+  text-align: right;
+  width: 800px;
+  margin: 0 0 20px auto;
+}
+.ct-hero h2 {
+  font-size: 16px;
+  text-align: right;
+  letter-spacing: 1.2px;
+}
+.ct-hero p {
+  font-size: 20px;
+  text-align: right;
+  width: 700px;
+  margin: 0 0 0 auto;
+}
+.ct-hero a.ct-button {
+  margin: 40px 0 0 auto;
+}
+
+.ct-about {
+  background-color: #F2F2F2;
+  color: #000000;
+  padding: 80px 0;
+}
+.ct-about h2 {
+  font-size: 50px;
+  text-align: center;
+}
+.ct-about h3 {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1.2px;
+}
+.ct-about p {
+  width: 700px;
+  font-size: 16px;
+  text-align: center;
+  margin: 0 auto;
+}
+.ct-about a.ct-button-light {
+  margin: 40px auto 0 auto;
+}/*# sourceMappingURL=ct-main.css.map */
