@@ -2,17 +2,32 @@
 $white: #FFFFFF
 $black: #000000
 $blue: #1F3044
+// $blue: 0071BA
 $orange: #CB935D
 $beige: #F2F2F2
+$beige-gray: #EDEDE4
+
+// Media queries
+@mixin tablet
+    @media screen and (min-width: 481px) and (max-width: 768px)
+        @content
+
+@mixin mobile
+    @media screen and (min-width: 320px) and (max-width: 480px)
+        @content
 
 // Mixins
-@mixin transition()
+@mixin transition
     transition: all 0.4s
 
 .ct-container
     width: 100%
     max-width: 920px
     margin: 0 auto
+    @include tablet
+        padding: 0 20px
+    @include mobile
+        padding: 0 10px
 
 .ct-orange
     color: $orange
@@ -26,8 +41,8 @@ $beige: #F2F2F2
     font-weight: bold
     padding: 5px 30px
     border: 2px solid $orange
-    @include transition()
-    &:hover
+    @include transition
+    &:hover, &:active, &:focus
         background-color: $orange
         color: $white
 
@@ -40,8 +55,8 @@ $beige: #F2F2F2
     font-weight: bold
     padding: 5px 30px
     border: 2px solid $orange
-    @include transition()
-    &:hover
+    @include transition
+    &:hover, &:active, &:focus
         background-color: $orange
         color: $white
 
@@ -50,74 +65,339 @@ $beige: #F2F2F2
     top: 0
     left: 0
     width: 100%
-    background-color: rgba($blue, 0)
+    background-color: rgba($blue, 1)
     color: white
     border-bottom: 1px solid rgba($white, 0.5)
     padding: 20px 0
     z-index: 99999
+    @include mobile
+        padding: 15px 0
     a
         font-size: 16px
         color: white
-        @include transition()
-    .row
+        @include transition
+        @include mobile
+            font-size: 14px
+    .ct-navbar-row
         display: flex
         justify-content: space-between
+        @include mobile
+            flex-direction: column-reverse
         .ct-navbar-callus
             a
                 font-weight: bold
+            @include mobile
+                display: none
         .ct-navbar-menu
             ul
                 list-style: none
                 margin: 0
                 padding: 0
+                text-align: center
                 li
                     display: inline-flex
                     margin: 0 10px
                     a
                         &:hover
                             color: $orange
+        .ct-navbar-logo
+            img
+                width: auto
+                height: 30px
+                @include mobile
+                    margin-bottom: 10px
+            @include mobile
+                display: flex
+                justify-content: center
 
-.ct-hero
-    background: linear-gradient(rgba($blue, 0.8), rgba($blue, 0.8)), url("/assets/images/ct-hero.jpg")
+#ct-hero
+    background: linear-gradient(rgba($blue, 0.8), rgba($blue, 0.8)), url("/assets/images/ct-hero.webp")
     background-size: cover
     background-position: right center
-    padding: 100px 0 80px 0
+    padding: 160px 0 140px 0
     h1, h2, p
         color: $white
     h1
         font-size: 46px
         text-align: right
-        width: 800px
+        width: 100%
+        max-width: 800px
         margin: 0 0 20px auto
+        @include tablet
+            font-size: 36px
+        @include mobile
+            font-size: 26px
     h2
         font-size: 16px
         text-align: right
         letter-spacing: 1.2px
+        @include mobile
+            font-size: 14px
     p
         font-size: 20px
         text-align: right
-        width: 700px
+        width: 100%
+        max-width: 700px
         margin: 0 0 0 auto
+        @include mobile
+            font-size: 16px
     a.ct-button
         margin: 40px 0 0 auto
 
-.ct-about
+#ct-about
     background-color: $beige
     color: $black
     padding: 80px 0
+    .ct-about-arrow
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100px
+        height: 100px
+        background-color: $beige
+        color: $blue
+        border-radius: 50%
+        margin: 0 auto
+        margin-top: -130px
+        margin-bottom: 50px
+        @include mobile
+            width: 80px
+            height: 80px
+            margin-top: -110px
+        i
+            font-size: 80px
+            @include mobile
+                font-size: 60px
     h2
         font-size: 50px
         text-align: center
+        @include mobile
+            font-size: 36px
     h3
         font-size: 16px
         font-weight: bold
         text-align: center
         letter-spacing: 1.2px
+        @include mobile
+            font-size: 12px
     p
-        width: 700px
+        width: 100%
+        max-width: 700px
         font-size: 16px
         text-align: center
         margin: 0 auto
     a.ct-button-light
         margin: 40px auto 0 auto
+    .ct-about-cards
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        margin: 40px 0
+        @include mobile
+            grid-template-columns: 1fr
+        .ct-about-card
+            background-color: $white
+            padding: 30px
+            @include transition
+            &:hover
+                background-color: $orange
+                color: $white
+                .ct-about-card-header
+                    i
+                        color: $white
+            .ct-about-card-header
+                display: flex
+                font-size: 22px
+                font-weight: bold
+                line-height: 1.1
+                margin-bottom: 10px
+                i
+                    color: $orange
+                    font-size: 30px
+                    margin-right: 10px
+                    @include transition
+        .ct-about-card-featured
+            background: $blue
+            color: $white
 
+#ct-quote
+    background: linear-gradient(rgba($orange, 0.8), rgba($orange, 0.8)), url("/assets/images/ct-quote.webp")
+    background-size: cover
+    background-position: center
+    color: $white
+    padding: 80px 0
+    text-align: center
+    img
+        width: 100px
+        height: auto
+        margin-bottom: 20px
+        @include mobile
+            width: 80px
+            height: auto
+    h2
+        font-size: 48px
+        line-height: 1.1
+        margin-bottom: 40px
+        @include mobile
+            font-size: 28px
+    a.ct-button
+        margin: 0 auto
+
+#ct-services
+    background-color: $beige
+    padding: 80px 0
+    h2
+        font-size: 50px
+        text-align: center
+        @include mobile
+            font-size: 36px
+    h3
+        font-size: 16px
+        font-weight: bold
+        text-align: center
+        letter-spacing: 1.2px
+        @include mobile
+            font-size: 12px
+    p
+        width: 100%
+        max-width: 700px
+        font-size: 16px
+        text-align: center
+        margin: 0 auto
+    .ct-services-cards
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 10px
+        margin: 40px 0
+        @include mobile
+            grid-template-columns: 1fr
+        .ct-services-card
+            display: grid
+            grid-template-columns: 1fr 120px
+            gap: 10px
+            background-color: $beige-gray
+            padding: 20px
+            @include transition
+            @include tablet
+                grid-template-columns: 1fr 100px
+            @include mobile
+                grid-template-columns: 1fr 80px
+            &:hover
+                background-color: $blue
+                color: $white
+                .ct-services-card-icon
+                    background-color: $beige-gray
+                    color: $blue
+            .ct-services-card-body
+                h3
+                    font-size: 24px
+                    text-align: left
+                    @include mobile
+                        font-size: 20px
+                p
+                    font-size: 12px
+                    text-align: left
+                    margin-bottom: 0
+            .ct-services-card-icon
+                display: flex
+                justify-content: center
+                align-items: center
+                background-color: $blue
+                color: $beige
+                width: 120px
+                height: 120px
+                border-radius: 50%
+                @include transition
+                @include tablet
+                    width: 100px
+                    height: 100px
+                @include mobile
+                    width: 80px
+                    height: 80px
+                i
+                    font-size: 40px
+                    @include mobile
+                        font-size: 30px
+    a.ct-button-light
+        margin: 0 auto
+
+#ct-process
+    background: linear-gradient(rgba($blue, 0.8), rgba($blue, 0.8)), url("/assets/images/ct-process.webp")
+    background-size: cover
+    background-position: center
+    color: $white
+    padding: 80px 0
+    h2
+        font-size: 50px
+        text-align: center
+        @include mobile
+            font-size: 36px
+    p
+        width: 100%
+        max-width: 700px
+        font-size: 16px
+        text-align: center
+        margin: 0 auto
+        margin-bottom: 40px
+    .ct-process-cards
+        display: flex
+        flex-direction: column
+        .ct-process-card
+            display: grid
+            grid-template-columns: auto 1fr
+            gap: 10px
+            width: 100%
+            max-width: 400px
+            background-color: $blue
+            padding: 15px
+            border: 1px dashed $orange
+            margin-bottom: 15px
+            @include transition
+            &:hover
+                background-color: $orange
+                .ct-process-card-icon
+                    background-color: $blue
+                    color: $orange
+            .ct-process-card-icon
+                display: flex
+                justify-content: center
+                align-items: center
+                background-color: $orange
+                color: $blue
+                font-size: 30px
+                font-weight: bold
+                width: 50px
+                height: 50px
+                border-radius: 50%
+                margin-left: -40px
+                @include transition
+                @include mobile
+                    width: 30px
+                    height: 30px
+                    font-size: 20px
+                    margin-left: 0
+            .ct-process-card-body
+                h3
+                    font-size: 20px
+                    margin-bottom: 10px
+                p
+                    font-size: 14px
+                    text-align: left
+                    margin-bottom: 0
+        .ct-process-card-1
+            align-self: flex-start
+        .ct-process-card-2
+            align-self: center
+            margin-right: 200px
+            @include tablet
+                margin-right: 100px
+            @include mobile
+                margin-right: 0
+        .ct-process-card-3
+            align-self: center
+            margin-left: 200px
+            @include tablet
+                margin-left: 100px
+            @include mobile
+                margin-left: 0
+        .ct-process-card-4
+            align-self: flex-end

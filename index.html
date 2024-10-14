@@ -17,6 +17,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/styles/main.css">
     <link rel="stylesheet" href="assets/styles/ct-main.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <script src="vendors/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
   </head>
   <body><!--[if lt IE 8]>
@@ -27,42 +29,186 @@
     </p><![endif]-->
     <nav class="ct-navbar">
       <div class="ct-container">
-        <div class="row">
+        <div class="ct-navbar-row">
           <div class="ct-navbar-callus">
             <a href="#" title="Llámanos">Llámanos: <span class="ct-orange">(52) 551122 3344</span></a>
           </div>
           <div class="ct-navbar-menu">
             <ul>
-              <li><a href="#" title="Acerca de">Acerca de</a></li>
-              <li><a href="#" title="Servicios">Servicios</a></li>
-              <li><a href="#" title="Contacto">Contacto</a></li>
+              <li><a href="#ct-about" title="Acerca de">Acerca de</a></li>
+              <li><a href="#ct-services" title="Servicios">Servicios</a></li>
+              <li><a href="#ct-contact" title="Contacto">Contacto</a></li>
             </ul>
           </div>
-          <div class="ct-navba-logo">
-            CHAMI TORRES
+          <div class="ct-navbar-logo">
+            <a href="#ct-hero">
+              <img src="./assets/images/ct-logo-white-horizontal.webp" alt="Chami Torres Abogados">
+            </a>
           </div>
         </div>
       </div>
     </nav>
-    <section class="ct-hero">
+    <header id="ct-hero">
       <div class="ct-container">
-        <h2>ESTÁNDARES ÉTICOS Y PROFESIONALES</h2>
-        <h1>Elaboramos estrategias legales dirigidas a la prevención de riesgos.</h1>
-        <p>Diseñamos planes legales específicos a las necesidades de nuestros clientes. Contamos con abogados altamente calificados para brindarte servicios de calidad y con los más altos estándares.</p>
-        <a class="ct-button" href="#" title="Conocer más">Conocer más</a>
+        <h2 class="wow fadeInUp">ESTÁNDARES ÉTICOS Y PROFESIONALES</h2>
+        <h1 class="wow fadeInRight">Elaboramos estrategias legales dirigidas a la prevención de riesgos.</h1>
+        <p class="wow fadeInDown">Diseñamos planes legales específicos a las necesidades de nuestros clientes. Contamos con abogados altamente calificados para brindarte servicios de calidad y con los más altos estándares.</p>
+        <a class="ct-button wow fadeInUp" href="#ct-about" title="Conocer más">Conocer más</a>
       </div>
-    </section>
-    <section class="ct-about">
-      <div class="ct-container">
-        <h3>UN EQUIPO MULTIDISCIPLINARIO</h3>
-        <h2>Nuestra <span class="ct-orange">experiencia</span></h2>
-        <p>Una firma con abogados comprometidos que siempre luchan por ser excepcionales e ir más allá de las expectativas de nuestros clientes.</p>
-        <p>Somos un equipo integrado por especialistas en cada materia, comprometidos con la obtención de resultados y la prevención de riesgos a través de la creación de estrategias confeccionadas exclusivamente para cada cliente.</p>
-        <a class="ct-button-light" href="#" title="Ver más">Ver más</a>
-      </div>
-    </section>
-  <div id="ryl-main-hamburger" class="ryl-hamburger"><i class="icon-menu"></i></div>
-    <div id="ryl-nav-right" class="nav ryl-nav-right">
+    </header>
+    <main>
+      <section id="ct-about">
+        <div class="ct-about-arrow">
+          <i class='bx bx-chevron-down' ></i>
+        </div>
+        <div class="ct-container">
+          <h3 class="wow fadeInUp">UN EQUIPO MULTIDISCIPLINARIO</h3>
+          <h2 class="wow fadeIn">Nuestra <span class="ct-orange">experiencia</span></h2>
+          <p class="wow fadeInDown">Una firma con abogados comprometidos que siempre luchan por ser excepcionales e ir más allá de las expectativas de nuestros clientes.</p>
+          <div class="ct-about-cards">
+            <div class="ct-about-card wow fadeInLeft">
+              <div class="ct-about-card-header">
+                <i class='bx bx-buildings'></i>
+                <span>Derecho de las empresas</span>
+              </div>
+              <div class="ct-about card-body">
+                Elaboración, revisión y negociación de todo tipo de Contratos; Constitución de Sociedades y día a día Corporativo.
+              </div>
+            </div>
+            <div class="ct-about-card ct-about-card-featured wow fadeInUp">
+              <div class="ct-about-card-header">
+                <i class='bx bx-brain' ></i>
+                <span>Propiedad intelectual</span>
+              </div>
+              <div class="ct-about card-body">
+                Estudio, dictaminación y Registro de marcas. Derechos de Autor.
+              </div>
+            </div>
+            <div class="ct-about-card wow fadeInRight">
+              <div class="ct-about-card-header">
+                <i class='bx bx-hard-hat' ></i>
+                <span>Relaciones de trabajo</span>
+              </div>
+              <div class="ct-about card-body">
+                Contratos, convenios, negociación y separación de personal. Atención y negociación de conflictos colectivos.
+              </div>
+            </div>
+          </div>
+          <p class="wow fadeInUp">Somos un equipo integrado por especialistas en cada materia, comprometidos con la obtención de resultados y la prevención de riesgos a través de la creación de estrategias confeccionadas exclusivamente para cada cliente.</p>
+          <a class="ct-button-light wow fadeInUp" href="#ct-services" title="Ver más">Ver más</a>
+        </div>
+      </section>
+      <section id="ct-quote">
+        <div class="ct-container">
+          <img src="./assets/images/ct-logo-white.webp" alt="Chami Torres Abogados" class="wow fadeInUp">
+          <h2 class="wow fadeIn">"El principio primordial es siempre promover la Prevención, ya que es la base del desarrollo más sano para las empresas"</h2>
+          <a href="#ct-process" class="ct-button wow fadeInDown">Ver proceso</a>
+        </div>
+      </section>
+      <section id="ct-services">
+        <div class="ct-container">
+          <h3 class="wow fadeInUp">NUESTROS SERVICIOS</h3>
+          <h2 class="wow fadeIn">Lo que <span class="ct-orange">hacemos</span></h2>
+          <p class="wow fadeInDown">Contamos con diversas áreas de expertis, cuya misión es proporcionar un servicio integral para las empresas, dando respuesta a los problemas que el día a día de las actividades económicas conllevan, buscando contribuir significativamente a la productividad de sus operaciones.</p>
+          <div class="ct-services-cards">
+            <div class="ct-services-card wow fadeIn">
+              <div class="ct-services-card-body">
+                <h3>1. Prevención laboral</h3>
+                <p>Servicios preventivos desarrollados a través de estrategias de contratación y separación de personal, así como documentos de control.</p>
+              </div>
+              <div class="ct-services-card-icon">
+                <i class='bx bx-bell' ></i>
+              </div>
+            </div>
+            <div class="ct-services-card wow fadeIn">
+              <div class="ct-services-card-body">
+                <h3>2. Auditorías legales</h3>
+                <p>Realizamos auditorías para la detección de áreas de oportunidad, ofreciendo propuestas de valor para prevención de conflictos.</p>
+              </div>
+              <div class="ct-services-card-icon">
+                <i class='bx bx-badge-check' ></i>
+              </div>
+            </div>
+            <div class="ct-services-card wow fadeIn">
+              <div class="ct-services-card-body">
+                <h3>3. Constitución de sociedades mercantiles</h3>
+                <p>Servicios preventivos desarrollados a través de estrategias de contratación y separación de personal, así como documentos de control.</p>
+              </div>
+              <div class="ct-services-card-icon">
+                <i class='bx bx-book-open' ></i>
+              </div>
+            </div>
+            <div class="ct-services-card wow fadeIn">
+              <div class="ct-services-card-body">
+                <h3>4. Contratos</h3>
+                <p>Elaboración, revisión y negociación de todo tipo de Convenios y Contratos con Clientes proveedores.</p>
+              </div>
+              <div class="ct-services-card-icon">
+                <i class='bx bx-file' ></i>
+              </div>
+            </div>
+            <div class="ct-services-card wow fadeIn">
+              <div class="ct-services-card-body">
+                <h3>5. Blindaje corporativo</h3>
+                <p>Estrategias personalizadas a las actividades y necesidades de nuestros clientes, cubriendo aspectos Laborales-Corporativos, con la implementación de procesos y documentos que optimicen los procesos de nuestros clientes.</p>
+              </div>
+              <div class="ct-services-card-icon">
+                <i class='bx bx-lock-alt' ></i>
+              </div>
+            </div>
+            <div class="ct-services-card wow fadeIn">
+              <div class="ct-services-card-body">
+                <h3>6. Consultoría y capacitación</h3>
+                <p>Brindamos consultoría especializada con abogados altamente calificados, así como capacitación a las áreas de la empresa que lo requieran para optimizar y reforzar los procesos del día a día comercial.</p>
+              </div>
+              <div class="ct-services-card-icon">
+                <i class='bx bx-award' ></i>
+              </div>
+            </div>
+          </div>
+          <a href="#ct-contact" class="ct-button-light wow fadeInUp">Contáctanos ahora</a>
+        </div>
+      </section>
+      <section id="ct-process">
+        <div class="ct-container">
+          <h2 class="wow fadeIn">Nuestro <span class="ct-orange">proceso</span></h2>
+          <p class="wow fadeInDown">Éste es el método o pasos a seguir para poder lograr nuestro éxito con los clientes.</p>
+          <div class="ct-process-cards">
+            <div class="ct-process-card ct-process-card-1 wow fadeIn">
+              <div class="ct-process-card-icon">1</div>
+              <div class="ct-process-card-body">
+                <h3>EVALUACIÓN DE ÁREAS DE RIESGO DEL CLIENTE</h3>
+                <p>Realizamos una auditoría en los procesos de nuestros Clientes con los que respaldan sus operaciones.</p>
+              </div>
+            </div>
+            <div class="ct-process-card ct-process-card-2 wow fadeIn">
+              <div class="ct-process-card-icon">2</div>
+              <div class="ct-process-card-body">
+                <h3>DICTAMINACIÓN DE DOCUMENTOS</h3>
+                <p>Evaluación de la documentación contractual y demás aplicables con la que concretan las operaciones de las empresa.</p>
+              </div>
+            </div>
+            <div class="ct-process-card ct-process-card-3 wow fadeIn">
+              <div class="ct-process-card-icon">3</div>
+              <div class="ct-process-card-body">
+                <h3>ELABORACIÓN DE PROPUESTA DE VALOR</h3>
+                <p>Se presenta una propuesta correctiva y preventiva confeccionada para cubrir y bliendar las áreas de oportunidad detectadas.</p>
+              </div>
+            </div>
+            <div class="ct-process-card ct-process-card-4 wow fadeIn">
+              <div class="ct-process-card-icon">4</div>
+              <div class="ct-process-card-body">
+                <h3>IMPLEMENTACIÓN DE ESTRATEGIA PERSONALIZADA AL CLIENTE</h3>
+                <p>Aplicación y perfeccionamiento de las estrategias propuestas con el fin de optimizar los recursos y procesos de nuestros clientes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+  <!-- <div id="ryl-main-hamburger" class="ryl-hamburger"><i class="icon-menu"></i></div> -->
+    <!-- <div id="ryl-nav-right" class="nav ryl-nav-right">
       <div class="ryl-nav-right-content-wrapper">
         <div class="ryl-close-nav-right"><i class="icon-wrong6"></i></div>
         <header><a href="index1.html">
@@ -88,8 +234,8 @@
           </ul>
         </footer>
       </div>
-    </div>
-    <div id="ryl-modal-search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+    </div> -->
+    <!-- <div id="ryl-modal-search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
       <div class="ryl-modal-dialog ryl-modal-search">
         <div data-dismiss="modal" class="ryl-dismiss-modal"><i class="icon-wrong6"></i></div>
         <div class="ryl-search-wrapper">
@@ -97,8 +243,8 @@
           <button><i class="icon-search"></i></button>
         </div>
       </div>
-    </div>
-    <div id="ryl-modal-blog-article" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+    </div> -->
+    <!-- <div id="ryl-modal-blog-article" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
       <div class="ryl-modal-dialog ryl-modal-blog-article">
         <div data-dismiss="modal" class="ryl-dismiss-modal"><i class="icon-wrong6"></i></div>
         <div class="container ryl-col-nopadding">
@@ -132,9 +278,9 @@
           </article>
         </div>
       </div>
-    </div>
+    </div> -->
     <div id="ryl-main">
-      <header id="home" class="ryl-bg-dots ryl-color-light">
+      <!-- <header id="home" class="ryl-bg-dots ryl-color-light">
         <div data-stellar-background-ratio="0.25" class="ryl-overlay-bg ryl-home-parallax-background-style-1 ryl-parallax-bg"></div>
         <header id="ryl-home-header" class="clearfix ryl-home-header-style-1">
           <div class="container">
@@ -195,8 +341,8 @@
             </div>
           </div>
         </div>
-      </header>
-      <section id="service" class="ryl-bg-light">
+      </header> -->
+      <!-- <section id="service" class="ryl-bg-light">
         <header class="ryl-section-header-style-1  ">
           <div class="container">
             <h2 class="ryl-bold-heading">Chami Torres Abogados</h2>
@@ -236,15 +382,15 @@
             </div>
           </div>
         </div>
-      </section>
-      <section id="quote-section" class="ryl-bg-dots ryl-color-light">
+      </section> -->
+      <!-- <section id="quote-section" class="ryl-bg-dots ryl-color-light">
         <div data-stellar-background-ratio="0.25" class="ryl-overlay-bg ryl-quote-parallax-background-style-1 ryl-parallax-bg"></div>
         <div class="ryl-margin-top-90"></div>
         <div class="container ryl-quote-item ryl-section-item">
           <q class="ryl-fs-2 ryl-fw-semibold">El principio primordial es siempre promover la Prevención, ya que es la base del desarrollo más sano para las empresas</q><a href="#contact" class="ryl-btn-1">CONTÁCTANOS</a>
         </div>
-      </section>
-      <section id="feature" class="ryl-bg-light">
+      </section> -->
+      <!-- <section id="feature" class="ryl-bg-light">
         <header class="ryl-section-header-style-1  ">
           <div class="container">
             <h2 class="ryl-bold-heading">SERVICIOS</h2>
@@ -304,8 +450,8 @@
             </div>
           </div>
         </div>
-      </section>
-      <section id="skill" class="ryl-bg-dots ryl-color-light">
+      </section> -->
+      <!-- <section id="skill" class="ryl-bg-dots ryl-color-light">
         <div data-stellar-background-ratio="0.25" class="ryl-overlay-bg ryl-skill-parallax-background-style-1 ryl-parallax-bg"></div>
         <header class="ryl-section-header-style-1  ">
           <div class="container">
@@ -342,13 +488,13 @@
             </div>
           </div>
         </div>
-      </section>
-      <section id="team" class="ryl-bg-light">
-        <header class="ryl-section-header-style-1  ryl-bg-gray">
+      </section> -->
+      <!-- <section id="team" class="ryl-bg-light"> -->
+        <!-- <header class="ryl-section-header-style-1  ryl-bg-gray">
           <div class="container">
             <h2 class="ryl-bold-heading">CONÓCENOS</h2>
             <p>Somos un equipo integrado por especialistas en cada materia, comprometidos con la obtención de resultados y la prevención de riesgos a través de la creación de estrategias confeccionadas exclusivamente para cada cliente.</p>
-          </div>
+          </div> -->
         <!--</header>
         <div class="container">
           <div class="row">
@@ -419,7 +565,7 @@
           </div>
         </div>
          -->
-      </section>
+      <!-- </section> -->
       <section id="testimonial" class="ryl-bg-dots ryl-color-light">
         <div data-stellar-background-ratio="0.25" class="ryl-overlay-bg ryl-testimonial-parallax-background-style-2 ryl-parallax-bg.scss"></div>
         <header class="ryl-section-header-style-1">
@@ -435,7 +581,7 @@
    
      
       </section>
-      <section id="process" class="ryl-bg-light">
+      <!-- <section id="process" class="ryl-bg-light">
         <header class="ryl-section-header-style-1  ">
           <div class="container">
             <h2 class="ryl-bold-heading">El PROCESO</h2>
@@ -481,7 +627,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <div class="ryl-icon-separator-wrapper">
         <div class="ryl-icon-separator icon-email29"></div>
       </div>
@@ -606,6 +752,8 @@ Con esta reforma se busca fijar, entre otros puntos, reglas claras, disminuir ju
     <script src="vendors/countdown/jquery.countdown.min.js"></script>
     <script src="vendors/skrollr/skrollr.min.js"></script>
     <script src="vendors/bootstrap-3.3/js/bootstrap.min.js"></script>
+    <script src="./assets/scripts/wow.min.js"></script>
+    <script>new WOW().init();</script>
     <script src="assets/scripts/main.js"></script>
     <!-- GA Code -->
     <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-57387972-1', 'auto');ga('send', 'pageview');</script>
