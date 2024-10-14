@@ -454,3 +454,13 @@ const ctHideMobileMenu = () => {
     const ctMobileMenu = document.querySelector(".ct-mobile-menu")
     if (ctMobileMenu) ctMobileMenu.style.display = "none"
 };
+
+window.addEventListener("scroll", () => {
+    const ctNavbar = document.querySelector(".ct-navbar");
+    const currentPosition = this.scrollY;
+    if (currentPosition >= 50) {
+        ctNavbar && ctNavbar.classList.add("ct-navbar-scroll")
+    } else {
+        ctNavbar && ctNavbar.classList.remove("ct-navbar-scroll")
+    }
+});

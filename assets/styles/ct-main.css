@@ -126,10 +126,12 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #1f3044;
+  background-color: rgba(31, 48, 68, 0);
   color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding: 20px 0;
   z-index: 9997;
+  transition: all 0.4s;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .ct-navbar {
@@ -179,6 +181,11 @@
 .ct-navbar .ct-navbar-row .ct-navbar-logo img {
   width: auto;
   height: 30px;
+}
+
+.ct-navbar-scroll {
+  background-color: #1f3044;
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
 }
 
 #ct-hero {

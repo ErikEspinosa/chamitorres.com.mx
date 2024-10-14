@@ -121,10 +121,12 @@ $beige-gray: #EDEDE4
     top: 0
     left: 0
     width: 100%
-    background-color: rgba($blue, 1)
+    background-color: rgba($blue, 0)
     color: white
+    border-bottom: 1px solid rgba($white, 0.2)
     padding: 20px 0
     z-index: 9997
+    @include transition
     @include mobile
         padding: 15px 0
     a
@@ -159,6 +161,9 @@ $beige-gray: #EDEDE4
             img
                 width: auto
                 height: 30px
+.ct-navbar-scroll
+    background-color: rgba($blue, 1)
+    border-bottom: 1px solid rgba($white, 0)
 
 #ct-hero
     background: linear-gradient(rgba($blue, 0.8), rgba($blue, 0.8)), url("../../assets/images/ct-hero.webp")
