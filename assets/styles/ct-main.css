@@ -59,7 +59,6 @@
   width: 100%;
   background-color: #1f3044;
   color: white;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   padding: 20px 0;
   z-index: 99999;
 }
@@ -83,15 +82,15 @@
   justify-content: space-between;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .ct-navbar .ct-navbar-row {
-    flex-direction: column-reverse;
+  .ct-navbar .ct-navbar-row .ct-navbar-callus {
+    display: none;
   }
 }
 .ct-navbar .ct-navbar-row .ct-navbar-callus a {
   font-weight: bold;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .ct-navbar .ct-navbar-row .ct-navbar-callus {
+  .ct-navbar .ct-navbar-row .ct-navbar-menu {
     display: none;
   }
 }
@@ -112,23 +111,17 @@
   width: auto;
   height: 30px;
 }
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  .ct-navbar .ct-navbar-row .ct-navbar-logo img {
-    margin-bottom: 10px;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  .ct-navbar .ct-navbar-row .ct-navbar-logo {
-    display: flex;
-    justify-content: center;
-  }
-}
 
 #ct-hero {
   background: linear-gradient(rgba(31, 48, 68, 0.8), rgba(31, 48, 68, 0.8)), url("../../assets/images/ct-hero.webp");
   background-size: cover;
   background-position: right center;
   padding: 160px 0 140px 0;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #ct-hero {
+    padding: 120px 0 100px 0;
+  }
 }
 #ct-hero h1, #ct-hero h2, #ct-hero p {
   color: #FFFFFF;
@@ -147,7 +140,7 @@
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   #ct-hero h1 {
-    font-size: 26px;
+    font-size: 30px;
   }
 }
 #ct-hero h2 {

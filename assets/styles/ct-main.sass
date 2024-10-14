@@ -67,7 +67,6 @@ $beige-gray: #EDEDE4
     width: 100%
     background-color: rgba($blue, 1)
     color: white
-    border-bottom: 1px solid rgba($white, 0.5)
     padding: 20px 0
     z-index: 99999
     @include mobile
@@ -81,14 +80,14 @@ $beige-gray: #EDEDE4
     .ct-navbar-row
         display: flex
         justify-content: space-between
-        @include mobile
-            flex-direction: column-reverse
         .ct-navbar-callus
-            a
-                font-weight: bold
             @include mobile
                 display: none
+            a
+                font-weight: bold
         .ct-navbar-menu
+            @include mobile
+                display: none
             ul
                 list-style: none
                 margin: 0
@@ -104,17 +103,14 @@ $beige-gray: #EDEDE4
             img
                 width: auto
                 height: 30px
-                @include mobile
-                    margin-bottom: 10px
-            @include mobile
-                display: flex
-                justify-content: center
 
 #ct-hero
     background: linear-gradient(rgba($blue, 0.8), rgba($blue, 0.8)), url("../../assets/images/ct-hero.webp")
     background-size: cover
     background-position: right center
     padding: 160px 0 140px 0
+    @include mobile
+        padding: 120px 0 100px 0
     h1, h2, p
         color: $white
     h1
@@ -126,7 +122,7 @@ $beige-gray: #EDEDE4
         @include tablet
             font-size: 36px
         @include mobile
-            font-size: 26px
+            font-size: 30px
     h2
         font-size: 16px
         text-align: right
