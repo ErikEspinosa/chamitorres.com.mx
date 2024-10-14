@@ -427,3 +427,30 @@ jQuery(document).ready(function($) {
     OsContactSubmit();
 
 });
+
+const ctMobileBurger = document.querySelector(".ct-mobile-burger");
+ctMobileBurger.addEventListener("click", () => {
+    ctShowMobileMenu();
+});
+
+const ctMobileMenuLinks = document.querySelectorAll(".ct-mobile-menu-links a");
+ctMobileMenuLinks.forEach(element => {
+    element.addEventListener("click", () => {
+        ctHideMobileMenu()
+    });
+});
+
+const ctMobileMenuClose = document.querySelector(".ct-mobile-menu-close");
+ctMobileMenuClose.addEventListener("click", () => {
+    ctHideMobileMenu();
+});
+
+const ctShowMobileMenu = () => {
+    const ctMobileMenu = document.querySelector(".ct-mobile-menu")
+    if (ctMobileMenu) ctMobileMenu.style.display = "block"
+};
+
+const ctHideMobileMenu = () => {
+    const ctMobileMenu = document.querySelector(".ct-mobile-menu")
+    if (ctMobileMenu) ctMobileMenu.style.display = "none"
+};

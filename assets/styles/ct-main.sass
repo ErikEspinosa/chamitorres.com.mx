@@ -60,6 +60,62 @@ $beige-gray: #EDEDE4
         background-color: $orange
         color: $white
 
+.ct-mobile-burger
+    position: fixed
+    top: 10px
+    right: 10px
+    display: none
+    justify-content: center
+    align-items: center
+    width: 40px
+    height: 40px
+    background-color: $beige-gray
+    color: $blue
+    border-radius: 50%
+    z-index: 9998
+    cursor: pointer
+    @include mobile
+        display: flex
+    i
+        font-size: 26px
+
+.ct-mobile-menu
+    display: none
+    position: fixed
+    width: 100%
+    height: 100%
+    background-color: rgba($blue, 0.95)
+    color: $beige-gray
+    text-align: center
+    padding: 20px
+    box-sizing: border-box
+    z-index: 9999
+    img
+        width: 50px
+        height: auto
+    ul
+        margin: 40px 0
+        li
+            margin: 0 0 10px 0
+            a
+                font-size: 36px
+                font-weight: bold
+                &:hover
+                    color: $orange
+    .ct-mobile-menu-close
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 50px
+        height: 50px
+        background-color: $beige-gray
+        color: $blue
+        border-radius: 50%
+        margin: 0 auto
+        cursor: pointer
+        i
+            font-size: 26px
+
 .ct-navbar
     position: fixed
     top: 0
@@ -68,7 +124,7 @@ $beige-gray: #EDEDE4
     background-color: rgba($blue, 1)
     color: white
     padding: 20px 0
-    z-index: 99999
+    z-index: 9997
     @include mobile
         padding: 15px 0
     a
