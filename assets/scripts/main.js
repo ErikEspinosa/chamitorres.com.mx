@@ -464,3 +464,49 @@ window.addEventListener("scroll", () => {
         ctNavbar && ctNavbar.classList.remove("ct-navbar-scroll")
     }
 });
+
+let slideIndex = 1
+const slider = ".ct-slider"
+const sliderInterval = 5000
+const enableAutoplay = true
+
+const plusSlides = (num) => {
+    stopAutoplay()
+    showSlides(slideIndex += num)
+    enableAutoplay && startAutoplay(sliderInterval)
+}
+
+const sliderPrev = document.querySelector(".slider-prev")
+sliderPrev && sliderPrev.addEventListener("click", () => {
+    plusSlides(-1)
+})
+
+const sliderNext = document.querySelector(".slider-next")
+sliderNext && sliderNext.addEventListener("click", () => {
+    plusSlides(1)
+})
+
+const showSlides = (index) => {
+    const slides = document.querySelectorAll(`${slider} > .slider-slide`)
+    if (index > slides.length) slideIndex = 1
+    if (index < 1) slideIndex = slides.length
+    slides.forEach(element => {
+        element.style.display = "none"
+    })
+    slides[slideIndex-1].style.display = "flex"
+}
+
+let autoplayInterval = null
+
+const startAutoplay = (interval) => {
+    stopAutoplay()
+    autoplayInterval = setInterval(() => {
+        plusSlides(1)
+    }, interval);
+}
+const stopAutoplay = () => {
+    clearInterval(autoplayInterval)
+}
+
+showSlides(slideIndex)
+enableAutoplay && startAutoplay(sliderInterval)

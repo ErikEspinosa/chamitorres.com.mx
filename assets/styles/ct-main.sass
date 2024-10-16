@@ -2,7 +2,7 @@
 $white: #FFFFFF
 $black: #000000
 $blue: #1F3044
-// $blue: 0071BA
+// $blue: #0071BA
 $orange: #CB935D
 $beige: #F2F2F2
 $beige-gray: #EDEDE4
@@ -19,6 +19,13 @@ $beige-gray: #EDEDE4
 // Mixins
 @mixin transition
     transition: all 0.4s
+@mixin button
+    display: block
+    width: max-content
+    font-size: 18px
+    font-weight: bold
+    padding: 5px 30px
+    @include transition
 
 .ct-container
     width: 100%
@@ -33,37 +40,36 @@ $beige-gray: #EDEDE4
     color: $orange
 
 .ct-button
-    display: block
-    width: max-content
+    @include button
     background-color: $blue
     color: $white
-    font-size: 18px
-    font-weight: bold
-    padding: 5px 30px
     border: 2px solid $orange
-    @include transition
     &:hover, &:active, &:focus
         background-color: $orange
         color: $white
 
 .ct-button-light
-    display: block
-    width: max-content
+    @include button
     background-color: $beige
     color: $orange
-    font-size: 18px
-    font-weight: bold
-    padding: 5px 30px
     border: 2px solid $orange
-    @include transition
     &:hover, &:active, &:focus
         background-color: $orange
         color: $white
 
+.ct-button-light-white
+    @include button
+    background-color: transparent
+    color: $white
+    border: 2px solid $white
+    &:hover, &:active, &:focus
+        background-color: $white
+        color: $blue
+
 .ct-mobile-burger
     position: fixed
-    top: 10px
-    right: 10px
+    top: 30px
+    right: 30px
     display: none
     justify-content: center
     align-items: center
@@ -102,6 +108,12 @@ $beige-gray: #EDEDE4
                 font-weight: bold
                 &:hover
                     color: $orange
+    .ct-mobile-menu-icons
+        display: flex
+        justify-content: center
+        a
+            font-size: 30px
+            margin: 10px
     .ct-mobile-menu-close
         display: flex
         justify-content: center
@@ -121,7 +133,7 @@ $beige-gray: #EDEDE4
     top: 0
     left: 0
     width: 100%
-    background-color: rgba($blue, 0)
+    background-color: transparent
     color: white
     border-bottom: 1px solid rgba($white, 0.2)
     padding: 20px 0
@@ -137,12 +149,19 @@ $beige-gray: #EDEDE4
             font-size: 14px
     .ct-navbar-row
         display: flex
-        justify-content: space-between
-        .ct-navbar-callus
+        flex-direction: column
+        .ct-navbar-logo
+            text-align: center
+            margin-bottom: 10px
             @include mobile
-                display: none
-            a
-                font-weight: bold
+                margin-bottom: 0
+            img
+                width: auto
+                height: 180px
+                @include transition
+                @include mobile
+                    width: auto
+                    height: 120px
         .ct-navbar-menu
             @include mobile
                 display: none
@@ -155,57 +174,126 @@ $beige-gray: #EDEDE4
                     display: inline-flex
                     margin: 0 10px
                     a
+                        line-height: normal
                         &:hover
                             color: $orange
-        .ct-navbar-logo
-            img
-                width: auto
-                height: 30px
+                        &.ct-navbar-icon
+                            font-size: 22px
 .ct-navbar-scroll
     background-color: rgba($blue, 1)
     border-bottom: 1px solid rgba($white, 0)
+    padding: 10px 0
+    .ct-navbar-row
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        .ct-navbar-logo
+            img
+                width: auto
+                height: 80px
+        .ct-navbar-menu
+            ul
+                li
+                    a
+                        font-size: 14px
+                        &.ct-navbar-icon
+                            font-size: 18px
 
 #ct-hero
-    background: linear-gradient(rgba($blue, 0.8), rgba($blue, 0.8)), url("../../assets/images/ct-hero.webp")
-    background-size: cover
-    background-position: right center
-    padding: 160px 0 140px 0
-    @include mobile
-        padding: 120px 0 100px 0
-    h1, h2, p
-        color: $white
-    h1
-        font-size: 46px
-        text-align: right
-        width: 100%
-        max-width: 800px
-        margin: 0 0 20px auto
-        @include tablet
-            font-size: 36px
-        @include mobile
-            font-size: 30px
-    h2
-        font-size: 16px
-        text-align: right
-        letter-spacing: 1.2px
-        @include mobile
-            font-size: 14px
-    p
-        font-size: 20px
-        text-align: right
-        width: 100%
-        max-width: 700px
-        margin: 0 0 0 auto
-        @include mobile
-            font-size: 16px
-    a.ct-button
-        margin: 40px 0 0 auto
+    .ct-slider
+        position: relative
+        min-height: 100vh
+        background-color: $blue
+        .ct-slide
+            position: absolute
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 100%
+            height: 100%
+            @include transition
+            .ct-container
+                text-align: center
+                h1
+                    font-size: 48px
+                    line-height: 1.1
+                    @include mobile
+                        font-size: 32px
+                h2
+                    font-size: 20px
+                    letter-spacing: 1.5px
+                    @include mobile
+                        font-size: 16px
+                a.ct-button-light-white
+                    margin: 80px auto 0 auto
+                .divider
+                    width: 20%
+                    height: 1px
+                    background-color: $white
+                    margin: 10px auto
+            &.ct-slide-1
+                background: linear-gradient(rgba($blue, 0.6), rgba($blue, 0.6)), url("../../assets/images/slide-1.webp")
+                background-size: cover
+                background-position: center
+                color: $white
+            &.ct-slide-2
+                background: linear-gradient(rgba($blue, 0.6), rgba($blue, 0.6)), url("../../assets/images/slide-2.webp")
+                background-size: cover
+                background-position: center
+                color: $white
+            &.ct-slide-3
+                background: linear-gradient(rgba($blue, 0.6), rgba($black, 0.6)), url("../../assets/images/slide-3.webp")
+                background-size: cover
+                background-position: center
+                color: $white
+        .ct-slider-prev, .ct-slider-next
+            position: absolute
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 50px
+            height: 50px
+            border-radius: 50%
+            top: 50%
+            transform: translateY(-50%)
+            background-color: rgba($white, 0.05)
+            color: $white
+            z-index: 999
+            cursor: pointer
+            @include transition
+            &:hover
+                background-color: rgba($white, 0.1)
+            i
+                font-size: 30px
+        .ct-slider-prev
+            left: 10px
+        .ct-slider-next
+            right: 10px
+        .ct-slider-go-down
+            position: absolute
+            bottom: 50px
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 80px
+            height: 80px
+            border-radius: 50%
+            left: 50%
+            transform: translateX(-50%)
+            background-color: rgba($white, 0.1)
+            color: $white
+            font-size: 40px
+            z-index: 999
 
 #ct-about
+    position: relative
     background-color: $beige
     color: $black
     padding: 80px 0
     .ct-about-arrow
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
         display: flex
         justify-content: center
         align-items: center
@@ -215,7 +303,7 @@ $beige-gray: #EDEDE4
         color: $blue
         border-radius: 50%
         margin: 0 auto
-        margin-top: -130px
+        margin-top: -120px
         margin-bottom: 50px
         @include mobile
             width: 80px
