@@ -510,3 +510,7 @@ const stopAutoplay = () => {
 
 showSlides(slideIndex)
 enableAutoplay && startAutoplay(sliderInterval)
+
+const footerYear = document.querySelector("#ct-footer-year")
+const year = new Date().getFullYear()
+if (footerYear) footerYear.innerHTML = year

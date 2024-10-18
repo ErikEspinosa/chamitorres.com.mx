@@ -594,3 +594,43 @@ h1, h2
                 transform: scale(1.2)
     a.ct-button-light-white
         margin: 0 auto
+
+#ct-footer
+    padding: 40px 0
+    background-color: $blue
+    color: $white
+    a
+        @include transition
+        &:hover
+            color: $orange
+    .ct-footer-logo
+        text-align: center
+        margin-bottom: 20px
+        img
+            width: auto
+            height: 24px
+    .ct-footer-links
+        margin-bottom: 20px
+        ul
+            list-style: none
+            margin: 0
+            padding: 0
+            text-align: center
+            li
+                display: inline-block
+                margin: 0 10px
+    .ct-footer-social
+        margin-bottom: 20px
+        ul
+            list-style: none
+            margin: 0
+            padding: 0
+            text-align: center
+            li
+                display: inline-block
+                margin: 0 10px
+                a
+                    font-size: 24px
+    .ct-footer-copyright
+        color: rgba($white, 0.5)
+        text-align: center
