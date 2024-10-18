@@ -1,3 +1,6 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap')
+
 // Colour palette
 $white: #FFFFFF
 $black: #000000
@@ -26,6 +29,12 @@ $beige-gray: #EDEDE4
     font-weight: bold
     padding: 5px 30px
     @include transition
+
+body
+    font-family: "Libre Franklin", sans-serif
+
+h1, h2
+    font-family: "Libre Baskerville", serif
 
 .ct-container
     width: 100%
@@ -379,11 +388,11 @@ $beige-gray: #EDEDE4
             width: 80px
             height: auto
     h2
-        font-size: 48px
-        line-height: 1.1
+        font-size: 42px
+        line-height: normal
         margin-bottom: 40px
         @include mobile
-            font-size: 28px
+            font-size: 24px
     a.ct-button
         margin: 0 auto
 
@@ -434,8 +443,9 @@ $beige-gray: #EDEDE4
                     color: $blue
             .ct-services-card-body
                 h3
-                    font-size: 24px
+                    font-size: 22px
                     text-align: left
+                    line-height: normal
                     @include mobile
                         font-size: 20px
                 p
@@ -523,7 +533,10 @@ $beige-gray: #EDEDE4
             .ct-process-card-body
                 h3
                     font-size: 20px
+                    line-height: normal
                     margin-bottom: 10px
+                    @include mobile
+                        font-size: 16px
                 p
                     font-size: 14px
                     text-align: left
