@@ -242,17 +242,17 @@ h1, h2
                     background-color: $white
                     margin: 10px auto
             &.ct-slide-1
-                background: linear-gradient(rgba($blue, 0.6), rgba($blue, 0.6)), url("../../assets/images/slide-1.webp")
+                background: linear-gradient(to bottom, rgba($blue, 0.9), rgba($blue, 0.6)), url("../../assets/images/slide-1.webp")
                 background-size: cover
                 background-position: center
                 color: $white
             &.ct-slide-2
-                background: linear-gradient(rgba($blue, 0.6), rgba($blue, 0.6)), url("../../assets/images/slide-2.webp")
+                background: linear-gradient(to bottom, rgba($blue, 0.9), rgba($blue, 0.6)), url("../../assets/images/slide-2.webp")
                 background-size: cover
                 background-position: center
                 color: $white
             &.ct-slide-3
-                background: linear-gradient(rgba($blue, 0.6), rgba($black, 0.6)), url("../../assets/images/slide-3.webp")
+                background: linear-gradient(to bottom, rgba($blue, 0.9), rgba($blue, 0.6)), url("../../assets/images/slide-3.webp")
                 background-size: cover
                 background-position: center
                 color: $white
@@ -375,7 +375,7 @@ h1, h2
             color: $white
 
 #ct-quote
-    background: linear-gradient(rgba($orange, 0.8), rgba($orange, 0.8)), url("../../assets/images/ct-quote.webp")
+    background: linear-gradient(to bottom, rgba($orange, 1), rgba($orange, 0.6)), url("../../assets/images/ct-quote.webp")
     background-size: cover
     background-position: center
     color: $white
@@ -399,6 +399,7 @@ h1, h2
 
 #ct-services
     background-color: $beige
+    color: $black
     padding: 80px 0
     h2
         font-size: 50px
@@ -477,7 +478,7 @@ h1, h2
         margin: 0 auto
 
 #ct-process
-    background: linear-gradient(rgba($blue, 0.8), rgba($blue, 0.8)), url("../../assets/images/ct-process.webp")
+    background: linear-gradient(to bottom, rgba($blue, 1), rgba($blue, 0.8)), url("../../assets/images/ct-process.webp")
     background-size: cover
     background-position: center
     color: $white
@@ -563,10 +564,9 @@ h1, h2
 
 #ct-clients
     padding: 80px 0
-    background: linear-gradient(rgba($orange, 0.9), rgba($orange, 0.9)), url("../../assets/images/ct-clients.webp")
+    background: linear-gradient(to bottom, rgba($orange, 1), rgba($orange, 0.8)), url("../../assets/images/ct-clients.webp")
     background-size: cover
     background-position: top center
-    background-attachment: fixed
     color: $white
     h2
         font-size: 50px
@@ -594,6 +594,82 @@ h1, h2
                 transform: scale(1.2)
     a.ct-button-light-white
         margin: 0 auto
+
+#ct-contact
+    padding: 80px 0
+    background: linear-gradient(to bottom, rgba($blue, 1), rgba($blue, 0.8)), url("../../assets/images/ct-contact.webp")
+    background-size: cover
+    background-position: center
+    color: $white
+    h2
+        font-size: 50px
+        text-align: center
+        margin-bottom: 0
+        @include mobile
+            font-size: 36px
+    .ct-contact-divider
+        width: 80%
+        height: 1px
+        background-color: rgba($white, 0.3)
+        margin: 20px auto 30px auto
+    .ct-contact-row
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 20px
+        @include mobile
+            grid-template-columns: 1fr
+        .ct-contact-info
+            img
+                width: 100%
+            ul.ct-contact-info-links
+                list-style: none
+                padding: 0
+                margin: 0
+                margin-bottom: 20px
+                li
+                    display: flex
+                    align-items: center
+                    margin-bottom: 10px
+                    font-weight: bold
+                    color: $white
+                    a
+                        color: $white
+                        @include transition
+                        &:hover
+                            color: $orange
+                    i
+                        color: $orange
+                        margin-right: 5px
+                        font-size: 16px
+        .ct-contact-form
+            form
+                input, textarea
+                    display: block
+                    width: 100%
+                    background-color: rgba($white, 0.05)
+                    color: $white
+                    border: 1px solid rgba($white, 0.5)
+                    font-size: 12px
+                    padding: 10px
+                    box-sizing: border-box
+                    margin-bottom: 12px
+                    @include transition
+                    &::placeholder
+                        color: $white
+                    &:focus
+                        background-color: rgba($white, 0.15)
+                        border: 1px solid rgba($orange, 1)
+                input[type="submit"]
+                    width: 50%
+                    background-color: $orange
+                    color: $white
+                    font-weight: bold
+                    text-transform: uppercase
+                    letter-spacing: 1.5px
+                    margin: 0 0 0 auto
+                    border: none
+                    &:hover
+                        background-color: $blue
 
 #ct-footer
     padding: 40px 0

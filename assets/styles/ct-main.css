@@ -298,19 +298,19 @@ h1, h2 {
   margin: 10px auto;
 }
 #ct-hero .ct-slider .ct-slide.ct-slide-1 {
-  background: linear-gradient(rgba(31, 48, 68, 0.6), rgba(31, 48, 68, 0.6)), url("../../assets/images/slide-1.webp");
+  background: linear-gradient(to bottom, rgba(31, 48, 68, 0.9), rgba(31, 48, 68, 0.6)), url("../../assets/images/slide-1.webp");
   background-size: cover;
   background-position: center;
   color: #FFFFFF;
 }
 #ct-hero .ct-slider .ct-slide.ct-slide-2 {
-  background: linear-gradient(rgba(31, 48, 68, 0.6), rgba(31, 48, 68, 0.6)), url("../../assets/images/slide-2.webp");
+  background: linear-gradient(to bottom, rgba(31, 48, 68, 0.9), rgba(31, 48, 68, 0.6)), url("../../assets/images/slide-2.webp");
   background-size: cover;
   background-position: center;
   color: #FFFFFF;
 }
 #ct-hero .ct-slider .ct-slide.ct-slide-3 {
-  background: linear-gradient(rgba(31, 48, 68, 0.6), rgba(0, 0, 0, 0.6)), url("../../assets/images/slide-3.webp");
+  background: linear-gradient(to bottom, rgba(31, 48, 68, 0.9), rgba(31, 48, 68, 0.6)), url("../../assets/images/slide-3.webp");
   background-size: cover;
   background-position: center;
   color: #FFFFFF;
@@ -468,7 +468,7 @@ h1, h2 {
 }
 
 #ct-quote {
-  background: linear-gradient(rgba(203, 147, 93, 0.8), rgba(203, 147, 93, 0.8)), url("../../assets/images/ct-quote.webp");
+  background: linear-gradient(to bottom, #cb935d, rgba(203, 147, 93, 0.6)), url("../../assets/images/ct-quote.webp");
   background-size: cover;
   background-position: center;
   color: #FFFFFF;
@@ -502,6 +502,7 @@ h1, h2 {
 
 #ct-services {
   background-color: #F2F2F2;
+  color: #000000;
   padding: 80px 0;
 }
 #ct-services h2 {
@@ -619,7 +620,7 @@ h1, h2 {
 }
 
 #ct-process {
-  background: linear-gradient(rgba(31, 48, 68, 0.8), rgba(31, 48, 68, 0.8)), url("../../assets/images/ct-process.webp");
+  background: linear-gradient(to bottom, #1f3044, rgba(31, 48, 68, 0.8)), url("../../assets/images/ct-process.webp");
   background-size: cover;
   background-position: center;
   color: #FFFFFF;
@@ -739,10 +740,9 @@ h1, h2 {
 
 #ct-clients {
   padding: 80px 0;
-  background: linear-gradient(rgba(203, 147, 93, 0.9), rgba(203, 147, 93, 0.9)), url("../../assets/images/ct-clients.webp");
+  background: linear-gradient(to bottom, #cb935d, rgba(203, 147, 93, 0.8)), url("../../assets/images/ct-clients.webp");
   background-size: cover;
   background-position: top center;
-  background-attachment: fixed;
   color: #FFFFFF;
 }
 #ct-clients h2 {
@@ -782,6 +782,103 @@ h1, h2 {
 }
 #ct-clients a.ct-button-light-white {
   margin: 0 auto;
+}
+
+#ct-contact {
+  padding: 80px 0;
+  background: linear-gradient(to bottom, #1f3044, rgba(31, 48, 68, 0.8)), url("../../assets/images/ct-contact.webp");
+  background-size: cover;
+  background-position: center;
+  color: #FFFFFF;
+}
+#ct-contact h2 {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #ct-contact h2 {
+    font-size: 36px;
+  }
+}
+#ct-contact .ct-contact-divider {
+  width: 80%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 20px auto 30px auto;
+}
+#ct-contact .ct-contact-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #ct-contact .ct-contact-row {
+    grid-template-columns: 1fr;
+  }
+}
+#ct-contact .ct-contact-row .ct-contact-info img {
+  width: 100%;
+}
+#ct-contact .ct-contact-row .ct-contact-info ul.ct-contact-info-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+#ct-contact .ct-contact-row .ct-contact-info ul.ct-contact-info-links li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+#ct-contact .ct-contact-row .ct-contact-info ul.ct-contact-info-links li a {
+  color: #FFFFFF;
+  transition: all 0.4s;
+}
+#ct-contact .ct-contact-row .ct-contact-info ul.ct-contact-info-links li a:hover {
+  color: #CB935D;
+}
+#ct-contact .ct-contact-row .ct-contact-info ul.ct-contact-info-links li i {
+  color: #CB935D;
+  margin-right: 5px;
+  font-size: 16px;
+}
+#ct-contact .ct-contact-row .ct-contact-form form input, #ct-contact .ct-contact-row .ct-contact-form form textarea {
+  display: block;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+  transition: all 0.4s;
+}
+#ct-contact .ct-contact-row .ct-contact-form form input::-moz-placeholder, #ct-contact .ct-contact-row .ct-contact-form form textarea::-moz-placeholder {
+  color: #FFFFFF;
+}
+#ct-contact .ct-contact-row .ct-contact-form form input::placeholder, #ct-contact .ct-contact-row .ct-contact-form form textarea::placeholder {
+  color: #FFFFFF;
+}
+#ct-contact .ct-contact-row .ct-contact-form form input:focus, #ct-contact .ct-contact-row .ct-contact-form form textarea:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid #cb935d;
+}
+#ct-contact .ct-contact-row .ct-contact-form form input[type=submit] {
+  width: 50%;
+  background-color: #CB935D;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0 0 0 auto;
+  border: none;
+}
+#ct-contact .ct-contact-row .ct-contact-form form input[type=submit]:hover {
+  background-color: #1F3044;
 }
 
 #ct-footer {
