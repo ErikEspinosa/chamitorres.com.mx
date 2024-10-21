@@ -374,6 +374,39 @@ h1, h2
             background: $blue
             color: $white
 
+#ct-press
+    background-color: $beige-gray
+    color: $black
+    padding: 60px 0
+    @include mobile
+        padding: 40px 0
+    .ct-press-row
+        display: flex
+        align-items: center
+        @include mobile
+            flex-direction: column
+        .ct-press-title
+            text-align: center
+            margin-right: 20px
+            @include mobile
+                margin-right: 0
+                margin-bottom: 20px
+            h2
+                font-size: 50px
+                margin: 0
+                @include mobile
+                    font-size: 36px
+            h3
+                color: $orange
+                font-size: 20px
+                letter-spacing: 1.2px
+                margin: 0 0 10px 0
+        .ct-press-banner
+            img
+                width: 100%
+                height: auto
+                mix-blend-mode: multiply
+
 #ct-quote
     background: linear-gradient(to bottom, rgba($orange, 1), rgba($orange, 0.6)), url("../../assets/images/ct-quote.webp")
     background-size: cover

@@ -467,6 +467,56 @@ h1, h2 {
   color: #FFFFFF;
 }
 
+#ct-press {
+  background-color: #EDEDE4;
+  color: #000000;
+  padding: 60px 0;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #ct-press {
+    padding: 40px 0;
+  }
+}
+#ct-press .ct-press-row {
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #ct-press .ct-press-row {
+    flex-direction: column;
+  }
+}
+#ct-press .ct-press-row .ct-press-title {
+  text-align: center;
+  margin-right: 20px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #ct-press .ct-press-row .ct-press-title {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+#ct-press .ct-press-row .ct-press-title h2 {
+  font-size: 50px;
+  margin: 0;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #ct-press .ct-press-row .ct-press-title h2 {
+    font-size: 36px;
+  }
+}
+#ct-press .ct-press-row .ct-press-title h3 {
+  color: #CB935D;
+  font-size: 20px;
+  letter-spacing: 1.2px;
+  margin: 0 0 10px 0;
+}
+#ct-press .ct-press-row .ct-press-banner img {
+  width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
 #ct-quote {
   background: linear-gradient(to bottom, #cb935d, rgba(203, 147, 93, 0.6)), url("../../assets/images/ct-quote.webp");
   background-size: cover;
