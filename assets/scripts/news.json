@@ -1,0 +1,28 @@
+{
+    "news": [
+        {
+            "id": 1,
+            "image": "./assets/images/news1.jpg",
+            "date": "27 Mayo 2019",
+            "title": "Nueva Reforma Laboral 2019",
+            "extract": "El Senado aprobó este lunes la Reforma Laboral, relacionada con la justicia laboral y la libertad sindical...",
+            "content": "El Senado aprobó este lunes la Reforma Laboral, relacionada con la justicia laboral y la libertad sindical. Con esta reforma se busca fijar, entre otros puntos, reglas claras, disminuir juicios individuales de conciliación y garantizar representatividad óptima en negociaciones colectivas."
+        },
+        {
+            "id": 2,
+            "image": "./assets/images/news2.jpg",
+            "date": "03 Junio 2019",
+            "title": "¿Sábes qué son los bienes públicos?",
+            "extract": "Un bien público es, desde el punto de vista jurídico, aquel que pertenece o es provisto por el Estado...",
+            "content": "Un bien público es, desde el punto de vista jurídico, aquel que pertenece o es provisto por el Estado a cualquier nivel a través de todos aquellos organismos que forman parte del sector público. Desde el punto de vista económico, es un bien que está disponible a todos y del cual el uso por una persona no substrae del uso por otro."
+        },
+        {
+            "id": 3,
+            "image": "./assets/images/news3.jpg",
+            "date": "28 Noviembre 2017",
+            "title": "Presidente del máximo Tribunal de América será mexicano",
+            "extract": "A partir del primer día del año 2018, el mexicano y juez Eduardo Ferrer Mac-Gregor Poisot fungirá como el nuevo...",
+            "content": "A partir del primer día del año 2018, el mexicano y juez Eduardo Ferrer Mac-Gregor Poisot fungirá como el nuevo presidente de la Corte Interamericana de Derechos Humanos (Corte IDH), con ello será el tercer jurista nacido en México en ocupar este cargo, ya que anteriormente Héctor Fix Zamudio en el periodo 1990 a 1993 y Sergio García Ramírez de 2004 a 2007 fueron los dos abogados mexicanos que ocuparon la presidencia de este tribunal."
+        }
+    ]
+}

@@ -514,3 +514,85 @@ enableAutoplay && startAutoplay(sliderInterval)
 const footerYear = document.querySelector("#ct-footer-year")
 const year = new Date().getFullYear()
 if (footerYear) footerYear.innerHTML = year
+
+const showNewsModal = (item) => {
+    if (item) {
+        const overlay = document.querySelector("#ct-overlay")
+        overlay.style.display = "block"
+        const newsModal = document.querySelector("#ct-news-modal")
+        newsModal.style.display = "block"
+        const newsModalDate = document.querySelector(".ct-news-modal-date")
+        newsModalDate.textContent = item.date
+        const newsModalTitle = document.querySelector(".ct-news-modal-title")
+        newsModalTitle.textContent = item.title
+        const newsModalContent = document.querySelector(".ct-news-modal-content")
+        newsModalContent.innerHTML = item.content
+    }
+}
+
+const closeNewsModal = () => {
+    const overlay = document.querySelector("#ct-overlay")
+    overlay.style.display = "none"
+    const newsModal = document.querySelector("#ct-news-modal")
+    newsModal.style.display = "none"
+}
+
+const newsModalClose = document.querySelector(".ct-news-modal-close")
+newsModalClose && newsModalClose.addEventListener("click", () => {
+    closeNewsModal()
+})
+
+const displayNews = (data) => {
+    const cards = document.querySelector(".ct-news-cards")
+    data && data.news && data.news.forEach((item) => {
+        const card = document.createElement("div")
+        card.classList.add("ct-news-card")
+
+        const cardHeader = document.createElement("div")
+        cardHeader.classList.add("ct-news-card-header")
+        cardHeader.style = 'background: url("'+item.image+'"); background-position: center; background-size: cover;'
+        card.appendChild(cardHeader)
+        
+        const cardBody = document.createElement("div")
+        cardBody.classList.add("ct-news-card-body")
+        
+        const cardBodyDate = document.createElement("small")
+        cardBodyDate.textContent = item.date
+        cardBody.appendChild(cardBodyDate)
+
+        const cardBodyTitle = document.createElement("h3")
+        cardBodyTitle.textContent = item.title
+        cardBody.appendChild(cardBodyTitle)
+
+        const cardBodyExtract = document.createElement("p")
+        cardBodyExtract.innerHTML = item.extract
+        cardBody.appendChild(cardBodyExtract)
+
+        const cardBodyLink = document.createElement("a")
+        cardBodyLink.textContent = "Leer más"
+        cardBodyLink.addEventListener("click", () => {
+            showNewsModal(item)
+        })
+        cardBody.appendChild(cardBodyLink)
+
+        card.appendChild(cardBody)
+        cards.appendChild(card)
+    })
+}
+
+const getNews = async () => {
+    await fetch("./assets/scripts/news.json")
+    .then((response) => {
+        if (!response.ok) {
+            throw new Error("Error trying get json file", response.statusText)
+        }
+        return response.json()
+    })
+    .then((data) => {
+        displayNews(data)
+    })
+    .catch(error => {
+        console.log("Error fetching json file", error)
+    })
+}
+getNews()
